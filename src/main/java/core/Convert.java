@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLDecoder;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +27,7 @@ import java.util.regex.Pattern;
  */
 public class Convert {
     public static void main(String[] args) throws IOException {
-        String dmPath = args[0];
+        String dmPath = new Scanner(System.in).nextLine();
         File dmFile = new File(dmPath);
         String path = dmFile.getParentFile().getAbsolutePath() + File.separator;
         String fileName = dmFile.getName();
